@@ -6,7 +6,7 @@ metadata:
   name: sonarqube
   namespace: cicd
 spec:
-  host: sonarqube-cicd.apps.dc1.com
+  host: sonarqube-cicd.apps.testcluster6.openshift.iets.com
   to:
     kind: Service
     name: sonarqube

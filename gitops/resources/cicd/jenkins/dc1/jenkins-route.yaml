@@ -10,7 +10,7 @@ metadata:
   name: jenkins
   namespace: cicd
 spec:
-  host: jenkins-cicd.apps.dc1.com
+  host: jenkins-cicd.apps.testcluster6.openshift.iets.com
   tls:
     insecureEdgeTerminationPolicy: Redirect
     termination: edge

@@ -6,7 +6,7 @@ metadata:
   name: selenium-hub
   namespace: cicd
 spec:
-  host: selenium-hub-cicd.apps.dc1.com
+  host: selenium-hub-cicd.apps.testcluster6.openshift.iets.com
   port:
     targetPort: 4444-tcp
   to:
