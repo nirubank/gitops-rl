@@ -8,7 +8,7 @@ metadata:
   namespace: cicd
 spec:
   failedBuildsHistoryLimit: 5
-  nodeSelector: null
+  nodeSelector: {}
   output: {}
   postCommit: {}
   resources: {}
