@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: '2019-09-04T16:14:31Z'
   labels:
     app: angular-build
-  name: angular-app-build
+  name: rl-frontend-build
   namespace: cicd
 spec:
   failedBuildsHistoryLimit: 5
@@ -12,7 +12,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'angular-app:latest'
+      name: 'rl-frontend:latest'
   postCommit: {}
   resources: {}
   runPolicy: Serial
