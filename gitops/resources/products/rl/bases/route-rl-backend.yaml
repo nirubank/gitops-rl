@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: rl-backend
+    app.kubernetes.io/component: rl-backend
+    app.kubernetes.io/instance: rl-backend
+    app.kubernetes.io/name: ""
+    app.kubernetes.io/part-of: rl-backend-app
+    app.openshift.io/runtime: ""
+  name: rl-backend
+spec:
+  host: rl-backend-rl-dev.apps.cluster-cra-016e.cra-016e.example.opentlc.com
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: rl-backend
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress: []

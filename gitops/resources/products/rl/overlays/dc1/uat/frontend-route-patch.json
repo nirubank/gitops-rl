@@ -1,0 +1,3 @@
+[
+    {"op": "replace", "path": "/spec/host", "value": "rl-frontend-rl-uat.apps.cluster-cra-016e.cra-016e.example.opentlc.com"}
+]

@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+bases:
+- ../../../bases
+namespace: rl-uat
+resources:
+- namespace.yaml
+- dc-rl-backend.yaml
+- dc-rl-frontend.yaml
+patchesJson6902:
+- target:
+    group: route.openshift.io
+    version: v1
+    kind: Route
+    name: rl-backend
+  path: backend-route-patch.json
+- target:
+    group: route.openshift.io
+    version: v1
+    kind: Route
+    name: rl-frontend
+  path: frontend-route-patch.json

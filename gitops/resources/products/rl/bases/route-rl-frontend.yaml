@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: rl-frontend
+    app.kubernetes.io/component: rl-frontend
+    app.kubernetes.io/instance: rl-frontend
+    app.kubernetes.io/name: ""
+    app.kubernetes.io/part-of: rl-frontend-app
+    app.openshift.io/runtime: ""
+  name: rl-frontend
+spec:
+  host: rl-frontend-rl-dev.apps.cluster-cra-016e.cra-016e.example.opentlc.com
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: rl-frontend
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress: []
